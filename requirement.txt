@@ -8,3 +8,4 @@ pyotp
 qrcode
 stripe
 allauth
+gunicorn
