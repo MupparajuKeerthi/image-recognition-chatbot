@@ -10,3 +10,4 @@ stripe
 django-allauth
 gunicorn
 psycopg2-binary
+dj_database_url
