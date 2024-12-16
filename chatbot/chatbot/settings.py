@@ -115,12 +115,21 @@ SOCIALACCOUNT_AUTO_SIGNUP = True
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+import os
+import dj_database_url
+
+# Check if running locally or in production
+
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://image_recognition_db_user:QjqfDbenZKKUJXBzo3Yr4PMBGJertGlg@dpg-ctg12n8gph6c73fr55f0-a/image_recognition_db',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
 
 
 # Password validation

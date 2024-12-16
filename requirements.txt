@@ -9,3 +9,4 @@ qrcode
 stripe
 allauth
 gunicorn
+psycopg2-binary
