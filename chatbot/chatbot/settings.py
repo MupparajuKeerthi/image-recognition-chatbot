@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-l!_i_ksb1gr0w__npz4dy7a&+7p*lgwr*r66i&p49fogitj!p)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['chatbot.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['image-recognition-chatbot-t44m.onrender.com', '127.0.0.1']
 
 
 # Application definition
