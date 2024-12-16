@@ -7,6 +7,6 @@ pillow
 pyotp
 qrcode
 stripe
-allauth
+django-allauth
 gunicorn
 psycopg2-binary
