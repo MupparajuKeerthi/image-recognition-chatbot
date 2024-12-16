@@ -118,13 +118,10 @@ SOCIALACCOUNT_AUTO_SIGNUP = True
 import os
 import dj_database_url
 
-# Check if running locally or in production
-
-import dj_database_url
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://image_recognition_db_user:QjqfDbenZKKUJXBzo3Yr4PMBGJertGlg@dpg-ctg12n8gph6c73fr55f0-a/image_recognition_db',
+        default='postgresql://image_recognition_db_user:QjqfDbenZKKUJXBzo3Yr4PMBGJertGlg@dpg-ctg12n8gph6c73fr55f0-a.oregon-postgres.render.com/image_recognition_db',
         conn_max_age=600,
         ssl_require=True
     )
