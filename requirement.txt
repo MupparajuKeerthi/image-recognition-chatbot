@@ -1,0 +1,10 @@
+Django
+django-allauth
+requests
+jwt
+phonenumbers
+pillow
+pyotp
+qrcode
+stripe
+allauth
