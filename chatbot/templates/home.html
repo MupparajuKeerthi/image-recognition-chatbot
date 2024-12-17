@@ -1,11 +1,73 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Home - Conversationa Image Recognition Chatbot{% endblock %}
+{% block title %}Home - ImageBot{% endblock %}
 
 {% block content %}
-<div class="jumbotron text-center">
-    <h1 class="display-4">Welcome to ImageBot</h1>
-    <hr class="my-4">
-    <p>Use the navigation bar to access your profile.</p>
+<div class="hero text-center py-5 bg-light">
+    <h1 class="display-4">Conversational Image Recognition Chatbot</h1>
+    <p class="lead">Your AI-powered assistant for interactive image-based conversations.</p>
+    <a href="#" class="btn btn-primary btn-lg">Try the Chatbot</a>
 </div>
+
+<section class="features py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Explore the Features</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-upload fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Image Uploading and Processing</h5>
+                        <p class="card-text">Upload images in various formats and process them efficiently for analysis and interaction.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-object-group fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Object Detection</h5>
+                        <p class="card-text">Identify objects in images using advanced models like YOLOv5, displaying them with bounding boxes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-language fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Natural Language Understanding</h5>
+                        <p class="card-text">Process and understand queries about images using advanced NLP techniques.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-question-circle fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Visual Question Answering (VQA)</h5>
+                        <p class="card-text">Ask questions about images, such as "What is the color of the car?" and get accurate answers.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-globe fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Multilingual Support</h5>
+                        <p class="card-text">Interact with the chatbot in multiple languages, including English, Spanish, and French.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-image fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">Image Captioning</h5>
+                        <p class="card-text">Automatically generate descriptive captions for uploaded images to provide additional context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
