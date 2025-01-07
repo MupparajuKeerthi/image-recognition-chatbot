@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Similarity Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='similarity.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Image Similarity Search</h1>
+        <div class="image-container">
+            <h2>Uploaded Image</h2>
+            <img src="{{ url_for('serve_uploaded_file', filename=filename) }}" alt="Uploaded Image">
+        </div>
+        <div class="image-container">
+            <h2>Similar Images</h2>
+            <div class="image-grid">
+                {% for img_url in similar_images %}
+                    <img src="{{ img_url }}" alt="Similar Image">
+                {% endfor %}
+            </div>
+        </div>
+        <a href="{{ url_for('process_image', filename=filename) }}" class="back-button">Back</a>
+    </div>
+</body>
+</html>

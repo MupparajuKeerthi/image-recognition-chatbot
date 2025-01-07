@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Enhancement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='enhance.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Enhancement</h1>
+        <div class="image-container">
+            <h2>Original Image</h2>
+            <img src="{{ url_for('serve_uploaded_file', filename=original_filename) }}" alt="Original Image">
+        </div>
+        <div class="image-container">
+            <h2>Enhanced Image</h2>
+            <img src="{{ url_for('serve_uploaded_file', filename=upscaled_filename) }}" alt="Enhanced Image">
+        </div>
+        <a href="{{ url_for('process_image', filename=original_filename) }}" class="back-button">Back</a>
+    </div>
+</body>
+</html>

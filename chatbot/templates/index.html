@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Image ChatBot</h1>
+    <form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data">
+        <label for="image-upload">Choose Image:</label> 
+        <input type="file" id="image-upload" name="file" required placeholder="Select an image" aria-label="Choose Image">
+        <button type="submit">Analyze Image</button> 
+    </form>
+</body>
+</html>

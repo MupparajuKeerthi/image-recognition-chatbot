@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption | ImageBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='caption.css') }}">
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Generated Caption</h1>
+    </header>
+    <main id="image-section">
+        <img id="uploaded-image" src="{{ url_for('serve_uploaded_file', filename=filename) }}" alt="Uploaded Image" width="300">
+        <p id="caption"><strong>Caption:</strong> {{ caption }}</p>
+        <a id="back-link" href="{{ url_for('process_image', filename=filename) }}">Back</a>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2025 ImageBot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

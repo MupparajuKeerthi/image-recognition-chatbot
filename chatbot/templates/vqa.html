@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question | ImageBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='vqa.css') }}">
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Ask a Question About the Image</h1>
+    </header>
+    <main id="question-section">
+        <img id="uploaded-image" src="{{ url_for('serve_uploaded_file', filename=filename) }}" alt="Uploaded Image" width="300">
+        <form id="question-form" action="" method="POST">
+            <label for="question">Your Question:</label><br>
+            <input type="text" id="question" name="question" required placeholder="Type your question here">
+            <button type="submit" id="submit-button">Get Answer</button>
+        </form>
+        {% if answer %}
+        <section id="answer-section">
+            <h2 id="answer-header">Answer: {{ answer }}</h2>
+            <p id="question-detail"><strong>Question:</strong> {{ question }}</p>
+        </section>
+        {% endif %}
+        <a id="back-link" href="{{ url_for('process_image', filename=filename) }}">Back</a>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2025 ImageBot. All rights reserved.</p>
+    </footer>
+</body>
+</html>

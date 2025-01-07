@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Image | ImageBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='process.css') }}">
+</head>
+<body>
+    <header>
+        <h1 id="main-header">Welcome to ImageBot</h1>
+    </header>
+    <main>
+        <section id="image-section">
+            <figure>
+                <img id="uploaded-image" src="{{ url_for('serve_uploaded_file', filename=filename) }}" alt="Uploaded Image" width="300">
+                <figcaption>Preview of the uploaded image</figcaption>
+            </figure>
+        </section>
+        <nav>
+            <ul id="action-list">
+                <li><a href="{{ url_for('caption_image', filename=filename) }}">Generate Caption</a></li>
+                <li><a href="{{ url_for('vqa_image', filename=filename) }}">Ask a Question</a></li>
+                <li><a href="{{ url_for('similarity_image', filename=filename) }}">Find Similar Images</a></li>
+                <li><a href="{{ url_for('enhance_image', filename=filename) }}">Enhance Image</a></li>
+            </ul>
+        </nav>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2025 ImageBot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
